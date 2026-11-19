@@ -62,27 +62,36 @@ dt{font-weight:600}
 dd{margin:0;color:var(--fg)}
 .chips{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0}
 .chips li{margin:0;padding:3px 11px;border-radius:999px;background:var(--chip);font-size:.88rem}
+.certs{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.certs li{display:flex;align-items:center;gap:14px;margin:0}
+.certs a{color:var(--fg)}
+.certs a:hover{color:var(--accent)}
+.certs .meta{margin:0}
+.badge{width:40px;height:38px;flex-shrink:0;object-fit:contain}
+.badge-pending{display:block;border:2px dashed var(--line);border-radius:10px}
 footer{color:var(--muted);font-size:.85rem;padding-top:8px;padding-bottom:48px}
 .print-only{display:none}
-@page{size:A4;margin:12mm 14mm}
+@page{size:A4;margin:10mm 13mm}
 @media print{
 :root{--bg:#fff;--card:#fff;--fg:#1c1917;--muted:#57534e;--line:#e7e5e4;--accent:#2563eb;--chip:#f1f5f9}
-body{font-size:9.6pt;line-height:1.4}
+body{font-size:9.3pt;line-height:1.35}
 main,header,footer{max-width:none;padding:0}
 header{padding-top:0;padding-bottom:6px}
 h1{font-size:19pt}
 .cta,footer{display:none}
 .print-only{display:list-item}
-.photo{width:92px;height:92px;border:0;box-shadow:none}
+.photo{width:84px;height:84px;border:0;box-shadow:none}
 .contacts{gap:2px 14px;font-size:9.4pt}
 h2{margin:0 0 6px}
 h3{font-size:10.5pt}
 .meta{font-size:9.4pt;margin:0 0 4px}
-section{padding:7px 0;break-inside:avoid}
+section{padding:5px 0;break-inside:avoid}
 ul{margin-top:3px}
 dl{gap:3px 14px;grid-template-columns:104px 1fr}
 .chips{gap:4px}
 .chips li{padding:1px 8px;font-size:8.8pt}
+.certs{gap:5px}
+.badge{width:26px;height:25px}
 a{color:inherit}
 }
 @media (max-width:560px){
@@ -159,6 +168,26 @@ dd{margin-bottom:10px}
     <p class="meta">2026 - 2027 (in progress)</p>
     <h3>BSc Teleinformatics - Kielce University of Technology</h3>
     <p class="meta">2022 - 2026</p>
+  </section>
+
+  <section aria-labelledby="certificates">
+    <h2 id="certificates">Certificates</h2>
+    <ul class="certs">
+      <li>
+        <img class="badge" src="/hubspot-aeo-badge.png" width="40" height="38" alt="HubSpot Academy AEO Fundamentals badge" loading="lazy">
+        <div>
+          <a href="/hubspot-aeo-certificate.jpg"><strong>AEO Fundamentals (Answer Engine Optimization)</strong> - HubSpot Academy</a>
+          <p class="meta">Issued 11/2026 | Valid until 12/2028</p>
+        </div>
+      </li>
+      <li>
+        <span class="badge badge-pending" aria-hidden="true"></span>
+        <div>
+          <strong>SEO Essentials</strong> - Semrush Academy
+          <p class="meta">In progress</p>
+        </div>
+      </li>
+    </ul>
   </section>
 
   <section aria-labelledby="languages">
